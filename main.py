@@ -1,8 +1,9 @@
 import asyncio
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import CommandStart
+import os
 
-API_TOKEN = "8427841715:AAG9UeQs-x6e6eEUDdgpoVdYiz9hL7oEPWA"
+API_TOKEN = os.getenv("API_TOKEN")
 ADMINS = [7947791483, 7200257195]
 
 bot = Bot(token=API_TOKEN)
@@ -62,4 +63,5 @@ async def main():
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
+
     asyncio.run(main())
